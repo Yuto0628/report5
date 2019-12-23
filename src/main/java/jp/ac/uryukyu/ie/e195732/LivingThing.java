@@ -14,6 +14,12 @@ public class LivingThing {
     private int attack;
     private boolean dead;
 
+    /**
+     * コンストラクタ。名前、最大HP、攻撃力を指定する。
+     * @param name モンスター名
+     * @param hitPoint モンスターのHP
+     * @param attack モンスターの攻撃力
+     */
     public LivingThing(String name, int hitPoint, int attack){
         this.name = name;
         this.hitPoint = hitPoint;
@@ -60,8 +66,8 @@ public class LivingThing {
     }
 
     /**
-     * Heroへ攻撃するメソッド。
-     * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
+     * 相手へ攻撃するメソッド。
+     * attackに応じて乱数でダメージを算出し、opponent.wounded()によりダメージ処理を実行。
      * @param opponent 攻撃対象
      */
     public void attack(LivingThing opponent){
